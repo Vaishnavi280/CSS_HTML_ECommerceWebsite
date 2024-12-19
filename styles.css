@@ -1,0 +1,149 @@
+/* CSS Variables for Themes */
+:root {
+    --bg-color: #ffffff;
+    --text-color: #000000;
+    --accent-color: #3498db;
+    --button-hover: #2980b9;
+}
+
+[data-theme="dark"] {
+    --bg-color: #2c3e50;
+    --text-color: #ecf0f1;
+    --accent-color: #e74c3c;
+    --button-hover: #c0392b;
+}
+
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: var(--accent-color);
+    color: #ffffff;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.theme-toggle {
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+/* Main Product Section */
+.product {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.gallery {
+    flex: 1;
+    padding: 10px;
+    max-width: 50%;
+}
+
+.main-image img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.thumbnails {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.thumbnails img {
+    width: 30%;
+    border: 2px solid var(--accent-color);
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.thumbnails img:hover {
+    transform: scale(1.1);
+}
+
+.details {
+    flex: 1;
+    padding: 10px;
+}
+
+.product-title {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.price {
+    font-size: 24px;
+    color: var(--accent-color);
+    margin-bottom: 15px;
+}
+
+.description {
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.options {
+    margin-bottom: 20px;
+}
+
+.add-to-cart {
+    padding: 10px 20px;
+    background-color: var(--accent-color);
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.add-to-cart:hover {
+    background-color: var(--button-hover);
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 10px;
+    background-color: var(--accent-color);
+    color: #ffffff;
+    margin-top: auto;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .product {
+        flex-direction: column;
+    }
+
+    .gallery, .details {
+        max-width: 100%;
+    }
+}
